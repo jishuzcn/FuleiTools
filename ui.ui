@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>892</width>
+    <height>693</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>26</width>
+    <height>26</height>
+   </size>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>831</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>按条件导出所有机器数据</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>10</y>
+        <width>711</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>651</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>200</y>
+        <width>104</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhMultiLine|Qt::ImhPreferNumbers</set>
+      </property>
+      <property name="placeholderText">
+       <string>请输入设备id</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>200</y>
+        <width>104</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>请输入设备名称</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>200</y>
+        <width>104</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhDate|Qt::ImhMultiLine</set>
+      </property>
+      <property name="placeholderText">
+       <string>请输入开始时间</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>200</y>
+        <width>104</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhDate|Qt::ImhMultiLine</set>
+      </property>
+      <property name="placeholderText">
+       <string>请输入结束时间</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>200</y>
+        <width>78</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>商户选择</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>200</y>
+        <width>78</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>经销商选择</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>260</y>
+        <width>761</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>28</x>
+         <y>40</y>
+         <width>60</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>文件名称：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_1">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>40</y>
+         <width>131</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="progressBar_1">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>45</y>
+         <width>250</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_1">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>40</y>
+         <width>91</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>开始</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../TMTools/Icon/ooopic_1494068712.ico</normaloff>../TMTools/Icon/ooopic_1494068712.ico</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>42</y>
+         <width>71</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>完成进度：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>45</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.xlsx</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="textEdit_1">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>90</y>
+         <width>651</width>
+         <height>221</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>按条件导出单个机器数据</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>10</y>
+        <width>731</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>661</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>771</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QTextEdit" name="textEdit_6">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>30</y>
+         <width>104</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhDate|Qt::ImhMultiLine</set>
+       </property>
+       <property name="placeholderText">
+        <string>请输入开始时间</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="textEdit_7">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>30</y>
+         <width>104</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhDate|Qt::ImhMultiLine</set>
+       </property>
+       <property name="placeholderText">
+        <string>请输入结束时间</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="textEdit_8">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>30</y>
+         <width>104</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhMultiLine|Qt::ImhPreferNumbers</set>
+       </property>
+       <property name="placeholderText">
+        <string>请输入设备id</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="progressBar_2">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>95</y>
+         <width>250</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>95</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.xlsx</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>92</y>
+         <width>71</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>完成进度：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>90</y>
+         <width>131</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>28</x>
+         <y>90</y>
+         <width>60</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>文件名称：</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>90</y>
+         <width>91</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>开始</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../TMTools/Icon/ooopic_1494068712.ico</normaloff>../TMTools/Icon/ooopic_1494068712.ico</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="textEdit_9">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>150</y>
+         <width>651</width>
+         <height>201</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>其它</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>892</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>关于</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>作者</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_ctrl_q">
+    <property name="title">
+     <string>退出(ctrl+q)</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_ctrl_q"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

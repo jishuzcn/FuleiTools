@@ -1,0 +1,5 @@
+('d:\\soft\\python36-32\\lib\\site-packages\\idna-2.6-py3.6.egg',
+ None,
+ {'*.pyd', '*.so', '*.py', '*.pyc', '*.pyo', 'EGG-INFO'},
+ 'DATA',
+ [])

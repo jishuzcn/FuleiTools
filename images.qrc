@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/" >
+    <file>Resouces/about.png</file>
+    <file>Resouces/author.png</file>
+    <file>Resouces/flkjlogo.png</file>
+    <file>Resouces/progressBar.png</file>
+    <file>Resouces/progressBarChunk.png</file>
+    <file>Resouces/quit.png</file>
+    <file>Resouces/bottomArrow.png</file>
+    <file>Resouces/topArrow.png</file>
+  </qresource>
+</RCC>
