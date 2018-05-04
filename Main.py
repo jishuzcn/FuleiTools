@@ -11,6 +11,7 @@ import time
 import furl
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
+import os
 
 
 class MainUI(Ui_MainWindow):
@@ -44,13 +45,24 @@ class MainUI(Ui_MainWindow):
             self.comboBox_2.addItem(value, key)
 
     def closeEvent(self, event):
-        reply = QtWidgets.QMessageBox.question(self, '关闭程序',
-                                               "关闭程序可能导致正在进行的操作终止，请确认\n是否退出并关闭程序？",
-                                               QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.No)
-        if reply == QtWidgets.QMessageBox.Yes:
-            event.accept()
+        if self.sender() == None:
+            reply = QtWidgets.QMessageBox.question(self, '关闭程序',
+                                                   "关闭程序可能导致正在进行的操作终止，请确认\n是否退出并关闭程序？",
+                                                   QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.No)
+            if reply == QtWidgets.QMessageBox.Yes:
+                event.accept()
+            else:
+                event.ignore()
         else:
-            event.ignore()
+            reply = QtWidgets.QMessageBox.question(self, '退出登陆',
+                                               "此操作将删除缓存不再自动登陆，请确认\n是否退出登陆并关闭程序？",
+                                               QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.No)
+            if reply == QtWidgets.QMessageBox.Yes:
+                os.remove(r"/fuleiCookie.txt")
+                event.accept()
+            else:
+                event.ignore()
+
 
     def clicked_textEdit(self):
         self.textEditSender = self.sender()
@@ -86,7 +98,7 @@ class MainUI(Ui_MainWindow):
         eid = self.textEdit.toPlainText()
         eName = self.textEdit_3.toPlainText()
         startTime = time1 if not time1 == "" else self.tools.timestampToTime(self.tools.getStartTimeOfToday())
-        endTime = time2 if not time2 == "" else self.tools.timestampToTime(self.tools.getendTimeOfToday())
+        endTime = time2 if not time2 == "" else self.tools.timestampToTime(self.tools.getEndTimeOfToday())
         combox1 = self.comboBox.itemData(self.comboBox.currentIndex())
         combox2 = self.comboBox_2.itemData(self.comboBox_2.currentIndex())
         holder = combox1 if not combox1 is None else ""

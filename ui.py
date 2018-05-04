@@ -227,7 +227,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.menu.setTitle(_translate("MainWindow", "帮助(H)"))
         self.actionAbout.setText(_translate("MainWindow", "关于"))
         self.actionAuthor.setText(_translate("MainWindow", "作者"))
-        self.actionQuit.setText(_translate("MainWindow", "退出"))
+        self.actionQuit.setText(_translate("MainWindow", "退出登陆"))
         self.actionQuit.setShortcut(_translate("MainWindow", "Ctrl+Q"))
 
         self.lineEdit_1.setText(str(int(time.time())) + "_More")
@@ -283,7 +283,7 @@ class LoginDialog(QtWidgets.QDialog):
         lo.doLogin(self.leName.text(), self.lePassword.text())
         check = lo.isLogin()
         if check:
-            self.accept()  # 关闭对话框并返回1
+            self.accept()  # 关闭对话框
         else:
             QtWidgets.QMessageBox.critical(self, u'错误', u'用户名密码不匹配')
 

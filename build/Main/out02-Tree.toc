@@ -1,5 +1,5 @@
-('d:\\soft\\python36-32\\lib\\site-packages\\chardet-3.0.4-py3.6.egg',
+('d:\\soft\\python36-32\\lib\\site-packages\\requests-2.18.4-py3.6.egg',
  None,
- {'*.pyd', '*.so', '*.py', '*.pyc', '*.pyo', 'EGG-INFO'},
+ {'*.pyo', '*.pyc', 'EGG-INFO', '*.so', '*.pyd', '*.py'},
  'DATA',
  [])

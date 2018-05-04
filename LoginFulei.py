@@ -77,7 +77,11 @@ class LoginFulei(object):
         url = "http://www.kadawo.com/fulei/index.php/common/checkIsLoginAjax"
         header = LoginFulei.flheader.postCheckLogin()
         header.setdefault('Cookie', 'PHPSESSID=%s' % self.getCookie())
-        login_code = LoginFulei.session.post(url, data="userId=2", headers=header).content
+        try:
+            self.user_id = self.get_userId()
+        except:
+            return False
+        login_code = LoginFulei.session.post(url, data="userId=%s" % self.user_id, headers=header).content
         if login_code == b'Y':
             print("login sucess")
             return True
@@ -92,7 +96,8 @@ class LoginFulei(object):
     def get_userId(self):
         soup = BeautifulSoup(self.get_html(), 'lxml')
         href = soup.find(name='ul', attrs={"class", "am-dropdown-content"}).li.a['href']
-        return re.search(r"\d", href).group()
+        print(re.search(r"\d{1,5}", href).group())
+        return re.search(r"\d{1,5}", href).group()
 
     def get_name(self):
         soup = BeautifulSoup(self.get_html(), 'lxml')
